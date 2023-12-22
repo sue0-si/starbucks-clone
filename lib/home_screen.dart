@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
+import 'bottom_navigation_bar.dart';
+
 class StarbucksHomeScreen extends StatelessWidget {
   const StarbucksHomeScreen({Key? key}) : super(key: key);
 
@@ -20,7 +22,7 @@ class StarbucksHomeScreen extends StatelessWidget {
                     );
                   } else if (index == 1) {
                     return Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Column(
@@ -31,9 +33,11 @@ class StarbucksHomeScreen extends StatelessWidget {
                                 children: [
                                   const Row(
                                     children: [
-                                      Text(' 5 ', style: TextStyle(color: Colors.grey)),
+                                      Text(' 5 ',
+                                          style: TextStyle(color: Colors.grey)),
                                       Icon(Icons.star, color: Colors.grey),
-                                      Text(' until Green Level', style: TextStyle(color: Colors.grey)),
+                                      Text(' until Green Level',
+                                          style: TextStyle(color: Colors.grey)),
                                     ],
                                   ),
                                   SizedBox(height: 10),
@@ -41,7 +45,8 @@ class StarbucksHomeScreen extends StatelessWidget {
                                     padding: EdgeInsets.zero,
                                     backgroundColor: Colors.grey.shade200,
                                     lineHeight: 10,
-                                    width: MediaQuery.of(context).size.width * 0.6,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.6,
                                   ),
                                 ],
                               ),
@@ -49,10 +54,12 @@ class StarbucksHomeScreen extends StatelessWidget {
                               SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.9,
                                 child: const Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
                                       children: [
                                         Icon(Icons.mail),
                                         Text(' What\'s New  '),
@@ -105,6 +112,46 @@ class StarbucksHomeScreen extends StatelessWidget {
                         ],
                       ),
                     );
+                  } else if (index == 5) {
+                    return SizedBox(
+                      width: 50,
+                      height: 100,
+                      child: Container(
+                        width: 50,
+                        color: Colors.amber,
+                      ),
+                    );
+                  } else if (index == 6) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        'assets/03_01_chrismas_event.png',
+                        fit: BoxFit.cover,
+                      ),
+                    );
+                  } else if (index == 7) {
+                    return const Padding(
+                      padding: EdgeInsets.all(24.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'What\'s New',
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            'See all',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.green),
+                          ),
+                        ],
+                      ),
+                    );
                   } else {
                     return Container(); // 그 외의 경우 빈 컨테이너 반환
                   }
@@ -112,9 +159,10 @@ class StarbucksHomeScreen extends StatelessWidget {
                 childCount: 20, // 아이템 개수를 적절하게 조절
               ),
             ),
-          )
+          ),
         ],
       ),
+      bottomNavigationBar: const BottomNavigationBarWidget(),
     );
   }
 }
