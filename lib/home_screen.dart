@@ -114,7 +114,33 @@ class StarbucksHomeScreen extends StatelessWidget {
                       ),
                     );
                   } else if (index == 5) {
-                    return HorizontalScroll();
+
+                    return HorizontalScrolling();
+                    // return Padding(
+                    //   padding: const EdgeInsets.all(24.0),
+                    //   child: SizedBox(
+                    //     height: 100,
+                    //     width: 200,
+                    //     child: Row(
+                    //         children: [
+                    //           Card(
+                    //             child: Column(
+                    //               children: [
+                    //                 Text('카페 아메리카노'),
+                    //                 Text('HOT | Tall'),
+                    //                 SizedBox(height: 20,),
+                    //                 LinearPercentIndicator(
+                    //                   width: 50,
+                    //                   lineHeight: 1,
+                    //                   backgroundColor: Colors.grey,
+                    //                 ),
+                    //               ],
+                    //             ),
+                    //           )
+                    //         ],
+                    //       ),
+                    //   ),
+                    // );
                   } else if (index == 6) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -130,8 +156,10 @@ class StarbucksHomeScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.1), // 그림자 색상 및 투명도 설정
-                              blurRadius: 100, // 그림자의 흐림 정도
+                              color: Colors.black.withOpacity(0.1),
+                              // 그림자 색상 및 투명도 설정
+                              blurRadius: 100,
+                              // 그림자의 흐림 정도
                               offset: const Offset(1, 4), // 그림자의 위치 (수평, 수직)
                             )
                           ],
@@ -156,7 +184,7 @@ class StarbucksHomeScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {  },
+        onPressed: () {},
         child: Icon(Icons.two_wheeler, color: Colors.white),
         backgroundColor: Colors.green,
       ),
