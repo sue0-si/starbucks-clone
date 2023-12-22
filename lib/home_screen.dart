@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:starbucks_clone/horizontal_scrolling.dart';
 
 import 'bottom_navigation_bar.dart';
 
@@ -113,14 +114,7 @@ class StarbucksHomeScreen extends StatelessWidget {
                       ),
                     );
                   } else if (index == 5) {
-                    return SizedBox(
-                      width: 50,
-                      height: 100,
-                      child: Container(
-                        width: 50,
-                        color: Colors.amber,
-                      ),
-                    );
+                    return HorizontalScroll();
                   } else if (index == 6) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -130,26 +124,25 @@ class StarbucksHomeScreen extends StatelessWidget {
                       ),
                     );
                   } else if (index == 7) {
-                    return const Padding(
-                      padding: EdgeInsets.all(24.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'What\'s New',
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            'See all',
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.green),
-                          ),
-                        ],
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1), // 그림자 색상 및 투명도 설정
+                              blurRadius: 100, // 그림자의 흐림 정도
+                              offset: const Offset(1, 4), // 그림자의 위치 (수평, 수직)
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset('assets/05_01_card.png'),
+                            const SizedBox(height: 10),
+                            Image.asset('assets/05_02_card.png'),
+                          ],
+                        ),
                       ),
                     );
                   } else {
