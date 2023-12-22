@@ -155,6 +155,11 @@ class StarbucksHomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
+        child: Icon(Icons.two_wheeler, color: Colors.white),
+        backgroundColor: Colors.green,
+      ),
       bottomNavigationBar: const BottomNavigationBarWidget(),
     );
   }
